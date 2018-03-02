@@ -11,6 +11,8 @@
 <body style="background-color:rgba(255,255,255, .3);min-width:980px;max-width:1760px;margin: 0 auto">
   <canvas id="canvas"></canvas>
   <div class="yy-me">
+    <audio src="./static/images/music.mp3" loop autoplay></audio>
+    <div class="btn-music-on"></div>
     <header>
       <div class="name">
         <ul>
@@ -64,7 +66,9 @@
           <div class="container none">
             <p style="text-indent:0"><strong>技术栈：<a target="_blank" href="http://shop.yyevan.top">http://shop.yyevan.top</a></strong> <br>
               vue+webpack+elementUI构建的SPA项目 <br>
-              服务端用的node+mongoose+mongodb搭建的数据</p>
+              服务端用的node+mongoose+mongodb + pm2 <br>
+              服务器是阿里云ubuntu 16.04   自己的域名配合nginx代理上线
+            </p>
             <ul>
               <li><strong>页面组成：</strong></li>
               <li>1.首页( 广告轮播 + 商品数据 + 商品分类 + 错误拦截)</li>
@@ -87,7 +91,7 @@
             <ul>
               <li>页面组成：</li>
               <li>
-                1.登录页面 { 用户注册注册: 规则简单些哦~, 用户登录, 信息提示 ) }
+                1.登录页面 { 用户注册注册: 规则相对于商城校验简单些哦~, 用户登录, 信息提示 ) }
               </li>
               <li>
                 2.主界面  ( 关于我的简介 )
@@ -104,8 +108,13 @@
           </div>
           <div class="container none">
             <p>
-                <strong>不好意思，还没有更多</strong>
+                <strong>移动微场景：链接地址: <a href="http://swiper.yyevan.top">swiper.yyevan.top</a> (注意这是移动端的哦~)</strong>
             </p>
+            <ul>
+              <li>这是一个故事微场景，仿的招商银行的微宣传</li>
+              <li>具体内容请看链接,哈哈</li>
+              <li id="yy-more">获取更多信息...</li>
+            </ul>
           </div>
         </div>
       </aside>
@@ -115,13 +124,14 @@
              I want to fly higher！！！
           </div>
           <div class="right-img">
-            <img src="./static/images/header1.jpg" alt="">
+            <img src="./static/images/header1.jpg" alt="" title="杨洋健身房">
           </div>
       </aside>
     </section>
     <footer>
 
     </footer>
+
   </div>
   <script type="text/javascript" src="./static/js/base.js"></script>
   <script type="text/javascript">
@@ -141,6 +151,26 @@
             }
           });
         }
+      let more = document.querySelector('#yy-more');
+      more.addEventListener('click', ()=> {
+        more.innerHTML = '哈哈这只假的哦~~~';
+        setTimeout(()=> {more.innerHTML = '获取更多信息...';},3000);
+      });
+      let oAudio = document.querySelector('audio');
+      let oBtnMusic = document.querySelector('.btn-music-on')
+      oBtnMusic.addEventListener('click', ()=> {
+        if (oAudio.paused) {
+          oAudio.paused = false;
+          oAudio.play();
+          oBtnMusic.className = 'btn-music-on';
+          oBtnMusic.style.animationPlayState = 'running';
+        }else {
+          oAudio.paused = true;
+          oAudio.pause();//出过错
+          oBtnMusic.className = 'btn-music-on btn-music-off';
+          oBtnMusic.style.animationPlayState = 'paused';
+        }
+      });
     })();
 
 
