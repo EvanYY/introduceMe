@@ -594,6 +594,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     top: 2%;
     right: 2%;
     animation: music 5s infinite linear;
+    cursor: pointer;
 }
 .btn-music-off {
     background: url("../images/musicBtnOff.png") 50% 50% no-repeat;
