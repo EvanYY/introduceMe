@@ -98,7 +98,8 @@ html, body{
 .footer a {
   padding: 10px 20px;
   margin-right: 20px;
-  letter-spacing: .2em
+  letter-spacing: .2em;
+  transition: all .3s ease;
 }
 .footer a:nth-child(1) {
   color: #fff;
@@ -109,5 +110,18 @@ html, body{
   color: red;
   opacity: .7;
   font-size: 15px;
+}
+.footer a:hover {
+  color: #000;
+  background-color: #fff;
+  border-radius: 5px;
+  transform:  translateY(-10px)  scale(1.4) ;
+  -ms-transform: translateY(-10px)  scale(1.4) ;
+  -moz-transform:  translateY(-10px)  scale(1.4) ;
+  -webkit-transform:  translateY(-10px)  scale(1.4) ;
+  -o-transform:  translateY(-10px)  scale(1.4) ;
+  -webkit-box-shadow: #ccc 0px 10px 10px;
+  -moz-box-shadow: #ccc 0px 10px 10px;
+  box-shadow: #ccc 0px 0px 10px;
 }
 /* about me */
