@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./static/css/reset.css">
+  <link rel="stylesheet" href="./static/css/me.css">
+  <title>杨洋自我介绍</title>
+</head>
+<body style="background-color:rgba(255,255,255, .3);min-width:980px;max-width:1760px;margin: 0 auto">
+  <canvas id="canvas"></canvas>
+  <div class="yy-me">
+    <header>
+      <div class="name">
+        <ul>
+          <li>杨洋 Evan</li>
+          <li><em>性别：</em> <span>男</span> </li>
+          <li><em>出生日：</em> <span>1992年</span> </li>
+          <li><em>工作经验：</em> <span>3年</span> </li>
+          <li><em>开发经验：</em> <span>1 年 2个月</span> </li>
+          <li><em>职位：</em> <span>前端开发工程师(全栈)</span> </li>
+          <li><em>邮箱：</em> <span>evan_yangyang@163.com</span></li>
+        </ul>
+      </div>
+      <div class="line-vertical"></div>
+      <div class="img">
+          <img src="./static/images/header.jpg" alt="">
+      </div>
+    </header>
+    <div class="line-across"></div>
+    <section>
+      <aside class="left">
+        <div class="title">自我介绍：</div>
+        <ul id="nav">
+          <li>自我介绍</li>
+          <li>商城项目</li>
+          <li>商城后台</li>
+          <li>更多..</li>
+        </ul>
+        <div class="contain">
+          <div class="container ">
+            <p>我叫杨洋，男，爱好女，单身，26岁来自黑龙江省富锦市</p>
+            <p>武汉轻工大学毕业，本科。。。~~~</p>
+            <p>就业之路比较坎坷，16年我觉得该改变了，
+              于是就进入了一个培训机构，名字就不说了，从此就进入了前端这个比较大的坑，哈哈
+            </p>
+            <p>
+              培训出来在哈尔滨一家刚刚成立的软件外包公司名叫 <span>靠谱网络科技</span> 就职前端，17年这一年爬坑之旅痛并着快乐，现在想想以前所谓的坑实在是好低级，哈哈。
+              离开这家公司是因为老板想转型做培训，想让我当老师，
+              <span>理念不同，撤乎。</span>
+            </p>
+            <p>
+              悲催的是由于硬盘丢了有没在云备份，以前的资料都丢了(灬ꈍ ꈍ灬)（可惜我接触的github时间太晚了，呜呜~~~）；
+              无奈从头开始年前用一个半月找了个静态商城进行修改，于是乎杨洋的商城就诞生了（只不过 <span>支付功能没做</span> ，因为第三方平台要钱。。。）。
+            </p>
+            <p>
+              <strong>服务端我用的mongodb/mongoose/node，前端用的vue，打包工具用的webpack </strong>
+              ，商品数据是我用node的cheerio模块<strong>创建的爬虫获得了大约 <span>1.6w条数据</span> </strong> ；
+              做了一个除了支付功能外的 <span>全栈商城和后台</span> ，部署在 <span>自己的阿里云服务器</span> 中，打算来到梦想之都（北京）见见世面~~；
+            </p>
+            <p>时间比较仓促，页面做的比较简单，慢慢会加入blog等模块，页面也会更加炫酷。。。</p>
+          </div>
+          <div class="container none">
+            <p style="text-indent:0"><strong>技术栈：<a target="_blank" href="http://shop.yyevan.top">http://shop.yyevan.top</a></strong> <br>
+              vue+webpack+elementUI构建的SPA项目 <br>
+              服务端用的node+mongoose+mongodb搭建的数据</p>
+            <ul>
+              <li><strong>页面组成：</strong></li>
+              <li>1.首页( 广告轮播 + 商品数据 + 商品分类 + 错误拦截)</li>
+              <li>2.商品列表页( 商品类别过滤 + 价格过滤 + 价格排序 + 懒加载 + 滚动分页 + 加入购物车 + 跳转商品详情页 + 登录拦截 + 消息提示)</li>
+              <li>3.商品详情页 ( 猜你喜欢模块 + 商品信息加载 + 立即支付 + 加入购物车 + 商品数目变化  + 错误信息提示 + hash传参)</li>
+              <li>4.购物车页面：( 购物商品列表获取 + 全选/单选 + 编辑数量 + 删除单条数据 + 批量删除 + 信息不完整拦截 + 购物车信息状态进行提示)</li>
+              <li>5.地址信息: ( 地址新增 + 删除 + 设为默认地址[进行排序，把默认地址放在第一个] + 数量过滤 + 信息确认进行订单信息核对页面)</li>
+              <li>6. 订单信息：(查询购物信息 + 费用详情 + 信息核对 + 确定支付，注意哦...详情页的立即支付与购物车传来的立即支付判断规则不同)</li>
+              <li>7. 订单创建成功页面获取订单信息 进行下一步操作；</li>
+              <li>8.头部公共组件(最让我痛苦的组件)： (用户登录 + 注册校验原生的哦 + 购车页面拦截 + 用户名是否注册校验)</li>
+              <li> <span>总结：</span> 页面信息传递通过vuex，hash和基本的父子组件通信，前后端的难点是业务逻辑的判断</li>
+            </ul>
+          </div>
+          <div class="container none">
+            <p>
+              <strong>技术栈：<a href="http://manage.yyevan.top" target="_blank">http://manage.yyevan.top</a> </strong><br>
+              vue+webpack+elementUI构建的SPA项目 <br>
+              服务端用的node+mongoose+mongodb搭建的数据
+            </p>
+            <ul>
+              <li>页面组成：</li>
+              <li>
+                1.登录页面 { 用户注册注册: 规则简单些哦~, 用户登录, 信息提示 ) }
+              </li>
+              <li>
+                2.主界面  ( 关于我的简介 )
+              </li>
+              <li>
+                3.用户信息查询页 (分 4 子页面 = { 订单查询，购物车模块：[ 编辑, 删除 ]，配送地址模块: [ 新增，删除， 编辑 ]，用户列表查询 })
+              </li>
+              <li>4.商品列表查询 ( 类别、 价格数据过滤，分页 )</li>
+              <li>
+                <span>总结：</span>
+                虽然有很多接口直接调用的商城接口，但是在过滤数据，配送地址编辑及其新增这个模块接口要重新更新，获取数据总长度比较繁琐
+              </li>
+            </ul>
+          </div>
+          <div class="container none">
+            <p>
+                <strong>不好意思，还没有更多</strong>
+            </p>
+          </div>
+        </div>
+      </aside>
+      <div class="line-vertical"></div>
+      <aside class="right">
+          <div class="right-text">
+             I want to fly higher！！！
+          </div>
+          <div class="right-img">
+            <img src="./static/images/header1.jpg" alt="">
+          </div>
+      </aside>
+    </section>
+    <footer>
+
+    </footer>
+  </div>
+  <script type="text/javascript" src="./static/js/base.js"></script>
+  <script type="text/javascript">
+    ;(function() {
+      let container = document.querySelectorAll(".container"),
+          nav = document.querySelectorAll('#nav li');
+          // console.log(nav);
+        for(let i = 0; i<nav.length;i++) {
+          nav[i].addEventListener('mouseover', function() {
+            for(let j = 0; j < nav.length; j++) {
+              if( j == i) {
+                container[j].classList.remove('none');
+                // return
+              }else {
+                container[j].classList.add('none');
+              }
+            }
+          });
+        }
+    })();
+
+
+
+  </script>
+</body>
+</html>
