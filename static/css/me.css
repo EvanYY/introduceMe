@@ -223,7 +223,7 @@ section {
 }
 .container>ul>li {
   margin-top: 10px;
-  font-size: 14px;
+  /* font-size: 14px; */
   letter-spacing: .2em
 }
 .container>ul>li:nth-child(1), .container>ul>li>span{
